@@ -52,7 +52,37 @@ if (x+y === 8 || x-y === 8){
 */
 
 /* WRITE YOUR ANSWER HERE
-var totalShoppingCart = [];
+
+const shoppingCart = [
+  {
+    name: "pencil",
+    price: "10"
+  },
+
+  {
+    name: "book",
+    price: "20"
+  },
+
+  {
+    name: "shoe",
+    price: "12"
+  }
+
+]
+function totalShoppingCart(values) {
+  let sum = 0
+  for (var i = 0; i < values.length ; i++){
+   sum = sum + parseInt(values[i].price);     //\n is break line in a string, parseInt to convert string to integer
+  }
+if (sum > 50){
+    console.log("total cost is" + " " + sum + "\n" + "Shipping cost is free" + "\n" + "Total sum ="+ " " + sum)
+} else {
+    console.log("total cost is" + " " + sum + "\n" + "Shipping cost is 10" + "\n" + "Total sum =" + " " + (sum + 10))
+}
+}
+totalShoppingCart(shoppingCart);
+
 */
 
 /* EXERCISE 5
@@ -60,7 +90,42 @@ You are working on an e-commerce website. Today is Black Friday and everything h
  Modify the previous answer inserting this information and, applying the same rules for the shipping cost, calculate the totalCost.
 */
 
-/* WRITE YOUR ANSWER HERE */
+/* WRITE YOUR ANSWER HERE 
+const shoppingCart = [
+  {
+    name: "pencil",
+    price: "10"
+  },
+
+  {
+    name: "book",
+    price: "20"
+  },
+
+  {
+    name: "shoe",
+    price: "22"
+  }
+
+]
+function totalShoppingCart(values) {
+  let sum = 0
+  for (var i = 0; i < values.length ; i++){
+   sum = sum + parseInt(values[i].price); 
+  }
+if (sum > 50){
+    console.log("total cost is" + " " + sum + "\n" + "Shipping cost is free")
+} else {
+    console.log("total cost is" + " " + sum + "\n" + "Shipping cost is 10")
+    
+}
+Discount = sum * 0.2;
+console.log("Black Friday Discount =" + " " + Discount + "\n" + "Total sum payable =" + " " + (sum - Discount))
+
+}
+totalShoppingCart(shoppingCart);
+
+*/
 
 /* EXERCISE 6
 Create three variables and assign a numerical value to each one of them. 
@@ -250,4 +315,30 @@ Display the numbers 0 through 10 (inclusive) in acesnding order  but skip displa
 
   */
 
-/* WRITE YOUR ANSWER HERE */
+/* WRITE YOUR ANSWER HERE 
+let day;
+ 
+switch (new Date().getDay()) {
+    case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+
+  } 
+alert("Today is" +" " + day);*/
